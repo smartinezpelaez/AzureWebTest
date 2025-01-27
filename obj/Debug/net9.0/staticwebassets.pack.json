@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Documentos\\Cursos\\Platzy\\Azure\\WebApps\\AzureWebTest\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\TestWebSite.bundle.scp.css",
-      "PackagePath": "staticwebassets\\TestWebSite.9g0wlm5lay.bundle.scp.css"
+      "Id": "C:\\Documentos\\Cursos\\Platzy\\Azure\\WebApps\\AzureWebTest\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\AzureWebTest.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AzureWebTest.kbzs8vk28s.bundle.scp.css"
     },
     {
       "Id": "C:\\Documentos\\Cursos\\Platzy\\Azure\\WebApps\\AzureWebTest\\wwwroot\\css\\site.css",
@@ -257,24 +257,24 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TestWebSite.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.AzureWebTest.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.TestWebSite.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.AzureWebTest.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.TestWebSite.props",
-      "PackagePath": "build\\TestWebSite.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.AzureWebTest.props",
+      "PackagePath": "build\\AzureWebTest.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.TestWebSite.props",
-      "PackagePath": "buildMultiTargeting\\TestWebSite.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.AzureWebTest.props",
+      "PackagePath": "buildMultiTargeting\\AzureWebTest.props"
     },
     {
-      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.TestWebSite.props",
-      "PackagePath": "buildTransitive\\TestWebSite.props"
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.AzureWebTest.props",
+      "PackagePath": "buildTransitive\\AzureWebTest.props"
     }
   ],
   "ElementsToRemove": []

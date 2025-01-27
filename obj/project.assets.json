@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Documentos\\Cursos\\Platzy\\Azure\\WebApps\\AzureWebTest\\TestWebSite.csproj",
-      "projectName": "TestWebSite",
-      "projectPath": "C:\\Documentos\\Cursos\\Platzy\\Azure\\WebApps\\AzureWebTest\\TestWebSite.csproj",
+      "projectUniqueName": "C:\\Documentos\\Cursos\\Platzy\\Azure\\WebApps\\AzureWebTest\\AzureWebTest.csproj",
+      "projectName": "AzureWebTest",
+      "projectPath": "C:\\Documentos\\Cursos\\Platzy\\Azure\\WebApps\\AzureWebTest\\AzureWebTest.csproj",
       "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
       "outputPath": "C:\\Documentos\\Cursos\\Platzy\\Azure\\WebApps\\AzureWebTest\\obj\\",
       "projectStyle": "PackageReference",
