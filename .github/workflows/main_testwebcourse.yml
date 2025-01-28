@@ -27,13 +27,16 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+        run: dotnet publish -c Release -o ./bin/Release/net8.0/publish
+
+      - name: List published files
+        run: ls -R ./bin/Release/net8.0/publish
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
+          path: ./bin/Release/net8.0/publish
 
   deploy:
     runs-on: windows-latest
@@ -50,7 +53,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: .net-app
-      
+          path: ./deploy-artifact
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
@@ -64,5 +68,4 @@ jobs:
         with:
           app-name: 'TestWebCourse'
           slot-name: 'Production'
-          package: .
-          
+          package: ./deploy-artifact
