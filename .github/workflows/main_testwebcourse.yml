@@ -21,22 +21,19 @@ jobs:
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.x'
+          dotnet-version: '9.x'
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ./bin/Release/net8.0/publish
-
-      - name: List published files
-        run: ls -R ./bin/Release/net8.0/publish
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ./bin/Release/net8.0/publish
+          path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
     runs-on: windows-latest
@@ -53,14 +50,13 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: .net-app
-          path: ./deploy-artifact
-
+      
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_2F3B0DFAF3D6453AB475A77610A4D30E }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E88E091852044C08AC84B14406F9A445 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_25F7E2C3E25042CB92217F8DFF5EB936 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_216BC15CADCB4CB298EF45B384BA0218 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_8F77DBA7A9F2498A88F5604AD35F400A }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E315071F1C084D6BAE193EF7278290D8 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -68,4 +64,5 @@ jobs:
         with:
           app-name: 'TestWebCourse'
           slot-name: 'Production'
-          package: ./deploy-artifact
+          package: .
+          
